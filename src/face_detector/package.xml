@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <name>face_detector</name>
+  <version>0.1.0</version>
+  <description>ROSified version of a simple OpenCV face detector.</description>
+  <maintainer email="kyle@canonical.com">Kyle Fazzari</maintainer>
+  <license>GPLv3</license>
+  <url type="website">https://github.com/kyrofa/face-detector-snap</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <run_depend>cv_bridge</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+</package>

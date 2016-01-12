@@ -1,0 +1,24 @@
+name: face-detector
+version: 0.1.0
+vendor: Kyle Fazzari <kyle@canonical.com>
+summary: OpenCV Face Detector
+description: ROSified version of a simple OpenCV face detector
+icon: icon.svg
+
+services:
+  face-detector:
+    start: roslaunch.wrapper face_detector face_detector.launch
+
+parts:
+  foo:
+    plugin: catkin
+    source: .
+    catkin-packages:
+      - face_detector
+    stage-packages:
+      - ros-indigo-ros-core
+      - ros-indigo-usb-cam
+  wrappers:
+    plugin: copy
+    files:
+      roslaunch.wrapper: roslaunch.wrapper

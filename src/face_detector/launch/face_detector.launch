@@ -1,0 +1,15 @@
+<launch>
+	<node name = "camera" pkg = "usb_cam" type = "usb_cam_node">
+		<param name = "video_device" value = "/dev/video0" />
+	</node>
+
+	<node name = "face_detector" pkg = "face_detector" type = "face_detector_node" output="screen">
+		<remap from = "image" to = "/camera/image_raw" />
+
+		<param name = "face_classifier_path" value = "$(find face_detector)/classifiers/haarcascade_frontalface_default.xml" />
+	</node>
+
+	<!--node name = "image_view" pkg = "image_view" type = "image_view">
+		<remap from = "image" to = "/faces_image" />
+	</node-->
+</launch>
