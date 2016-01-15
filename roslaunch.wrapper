@@ -1,5 +1,5 @@
 #!/bin/sh
 
-export ROS_HOME=$SNAP_APP_DATA_PATH/ros
+export ROS_HOME=$SNAP_DATA/ros
 
 exec "roslaunch" $*

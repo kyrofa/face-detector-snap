@@ -1,13 +1,14 @@
 name: face-detector
 version: 0.1.0
-vendor: Kyle Fazzari <kyle@canonical.com>
 summary: OpenCV Face Detector
 description: ROSified version of a simple OpenCV face detector
-icon: icon.svg
 
-services:
+apps:
   face-detector:
-    start: roslaunch.wrapper face_detector face_detector.launch
+    command: roslaunch.wrapper face_detector face_detector.launch
+    daemon: simple
+    caps:
+      - network-listener
 
 parts:
   foo:
